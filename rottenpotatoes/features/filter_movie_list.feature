@@ -29,6 +29,8 @@ Scenario: restrict to movies with 'PG' or 'R' ratings
   And I uncheck the following ratings: G, PG-13
   # enter step to "submit" the search form on the homepage
   And I press "ratings_submit"
+  # enter step(s) to ensure that user will be back to the home page
+  Then I should be on the home page
   # enter step(s) to ensure that PG and R movies are visible
   Then I should see "The Terminator"
   And I should see "When Harry Met Sally"
